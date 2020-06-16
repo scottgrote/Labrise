@@ -6,7 +6,7 @@ export const readPatInfo = () => {
   return dispatch => {
       dispatch(_readPatInfoStarted());
 
-      return axios.get(`https://run.mocky.io/v3/56d11790-ed77-473e-bf4b-b8be591e33f9`)//make my mocky
+      return axios.get(`https://run.mocky.io/v3/00a0f441-8a8b-4224-a59b-85593026412c`)
       .then(res => {
           dispatch(_readPatInfoSuccess(res));
       })
@@ -20,6 +20,7 @@ export const readPatInfo = () => {
 }
 
 const _readPatInfoSuccess = (res) => {
+    //console.log("debug:" +res.data[1]);
     return {
         type: READ_PATINFO_SUCCESFUL,
         data:  res.data

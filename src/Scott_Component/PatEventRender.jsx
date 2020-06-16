@@ -4,8 +4,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PatEventRender = ({ patInfoData }) => {
+    //console.log("debugxx"+JSON.stringify(patInfoData));
 
- 
+    function createPatRow(patsInfo){
+        return (
+            <tr key={patsInfo.invoice_ID}>
+                <td> {patsInfo.date} </td>
+                <td> {patsInfo.id} </td>
+                <td> {patsInfo.results} </td>
+            </tr>
+        );
+    }
 
     let content = '';
 
@@ -18,10 +27,25 @@ const PatEventRender = ({ patInfoData }) => {
             </div>
         );
     }
-    
+    //console.log("debugxxxx67"+JSON.stringify(patInfoData));
 
     if(patInfoData && patInfoData.requestSucessful){
-        patInfoData=[
+        content = 
+        (<table className="table">
+            <thead>
+                <tr>
+                    <th>date</th>
+                    <th>ID</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {patInfoData.patInfo.map((patsInfo) => createPatRow(patsInfo))}
+            </tbody>    
+        </table>)
+        //console.log("debugxxxxinsdie"+patInfoData.requestSucessful);
+        /*patInfoData=/*{"patInfo":[{"date":"03-04-1997","id":"ABC-1","results":"passed"},{"date":"03-04-1876","id":"ABC-1","results":"passed"},{"date":"03-04-2022","id":"ABC-1","results":"passed"}],"requestSucessful":true}*/
+         /*           [
         {
             "date": "03-04-1997",
             "id": "ABC-1",
@@ -62,7 +86,7 @@ const PatEventRender = ({ patInfoData }) => {
                     </tr>
                    {x}
                    </tbody>
-                 </table>)
+                 </table>)*/
     }
 
     if(patInfoData && patInfoData.requestFailed){

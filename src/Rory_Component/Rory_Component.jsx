@@ -27,7 +27,6 @@ const InvoiceContainer = (props) => {
         const { actions } = props;
         actions.readInvoices();
     }, [] );
-
    
     return(
         <div>

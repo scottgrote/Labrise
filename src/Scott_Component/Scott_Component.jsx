@@ -17,7 +17,9 @@ const PatEventContainer = (props) => {
         const { actions } = props;
         actions.readPatInfo();
     }, [] );
-
+    //console.log("debugrory"+JSON.stringify(props));
+    //console.log("debugrory1"+JSON.stringify(props.patInfoData));
+    //console.log("debugrory2"+JSON.stringify(typeof props.patInfoData));
    
     return(
         <div>
