@@ -6,7 +6,7 @@ export const readPatInfo = () => {
   return dispatch => {
       dispatch(_readPatInfoStarted());
 
-      return axios.get(`https://run.mocky.io/v3/00a0f441-8a8b-4224-a59b-85593026412c`)
+      return axios.get(`https://run.mocky.io/v3/ccc4e315-c250-4fc0-bea9-617680645599`)
       .then(res => {
           dispatch(_readPatInfoSuccess(res));
       })

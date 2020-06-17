@@ -6,6 +6,7 @@ import { users } from './users.reducer';
 import { alert } from './alert.reducer';
 import invoiceReducer from './invoiceReducer';
 import patEventReducer from './patEventReducer';
+import resultModalReducer from './resultModalReducer';
 
 const rootReducer = combineReducers({
   authentication,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   users,
   alert,
   invoiceReducer,
-  patEventReducer
+  patEventReducer,
+  resultModalReducer
 });
 
 export default rootReducer;

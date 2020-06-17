@@ -73,6 +73,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import  Scott_Component from "../Scott_Component/Scott_Component";
 import  Rory_Component from "../Rory_Component/Rory_Component";
 import Scott_Component from '../Scott_Component/Scott_Component';
+import Scott_otherComponent from '../Scott_OtherComponent/Scott_otherComponent';
 // import  Kevin_Component from "../Kevin_Component/Kevin_Component";
 // import  Artem_Component from "../Artem_Component/Artem_Component";
 
@@ -87,6 +88,7 @@ export class PatientPage extends React.Component{
                 <Link to="/">Home</Link>
                 <Rory_Component />
                 <Scott_Component/>
+                <Scott_otherComponent/>
                 {/* <Will_Component />
                 <Scott_Component />
                 // <Rory_Component />

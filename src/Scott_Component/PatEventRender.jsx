@@ -4,9 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PatEventRender = ({ patInfoData }) => {
-    //console.log("debugxx"+JSON.stringify(patInfoData));
+    console.log("debugxx"+JSON.stringify(patInfoData));
 
-    function createPatRow(patsInfo){
+    function createPatRow(patsInfo){//not invoice id
         return (
             <tr key={patsInfo.invoice_ID}>
                 <td> {patsInfo.date} </td>
